@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish;
+}
+
+html {
+  font-size: 55.5%;
+}
+
+:root {
+  --main-color: #333;
+  --primary-color: #acacac;
+  --icon-color: #525252;
+}
+
+i {
+  width: 2rem;
+  height: 2rem;
+}
+
+.fa,
+.fas {
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+body {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  line-height: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.1rem solid #9a9191;
+  transform: rotate(-0.05deg);
+  margin-bottom: 7rem;
+}
+
+.Bookshop {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+ .arrow-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.Bookshop {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--main-color);
+  margin-left: 1.5rem;
+  font-weight: 400;
+}
+
+
+.cart-icon {
+    display: flex;
+    text-align: end;
+    margin-right: 2rem;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+  }
+  
+  .cart-icon img {
+    width: 5rem;
+    height: 5rem;
+    color: #2f80ed;
+  }
+  
+  .cart-icon p {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: -1.2rem;
+    top: 0.9rem;
+    border-radius: 50%;
+    background: #99cbf7;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+  }
+  
+  .main-cart-section h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgba(41, 41, 41, 1);
+    margin-bottom: 1rem;
+  }
+  
+  .main-cart-section .total-items {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+    margin-bottom: 5rem;
+  }
+  
+  .total-items-count {
+    font-weight: bold;
+    color: var(--main-color);
+  }
