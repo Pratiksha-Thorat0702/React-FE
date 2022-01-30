@@ -19,7 +19,7 @@ function App(){
        WELCOME TO BOOKSHOP..THE BOOK SPOT!!
 
      </h3>
-
+    
       <nav className="navbar navbar-expand-sm bg-light navbar-dark">
 
        <NavLink className="btn btn-light btn-outline-primary" to="/SignUp" >
@@ -27,12 +27,16 @@ function App(){
              SignUp
 
            </NavLink>
+           <ul className="navbar-nav">
+           <li className="nav-item-m-1">
            <NavLink className="btn btn-light btn-outline-primary" to="/SignIn" >
             
             SignIn
 
-           </NavLink>
-           <ul className="navbar-nav">
+          </NavLink>
+          </li>
+      
+            
 
 <li className="nav-item-m-1">
 
@@ -44,7 +48,7 @@ function App(){
 
 </li>
 
-<li className="nav-item-m-1">
+{/*<li className="nav-item-m-1">
 
   <NavLink className="btn btn-light btn-outline-primary" to="/Product">
 
@@ -52,7 +56,7 @@ function App(){
 
   </NavLink>
 
-</li>
+  </li>*/}
 
 <li className="nav-item-m-1">
 
@@ -73,13 +77,13 @@ function App(){
 
 <Route path='/Home' component={Home}/>
 
-<Route path='/Product' component={Product}/>
+{/*<Route path='/Product' component={Product}/>*/}
 
 <Route path='/Cart' component={Cart}/>
 
 <Route path='/SignUp' component={SignUp}/>
 
-{/*<Route path='/SignIn' component={SignIn}/>*/}
+<Route path='/SignIn' component={SignIn}/>
 
 
 </div>
