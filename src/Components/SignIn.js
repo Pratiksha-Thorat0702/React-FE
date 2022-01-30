@@ -1,36 +1,57 @@
-import React  from 'react';
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 //import img2 from './images/un.png';
 //import img3 from './images/password.png';
 import './SignIn.css'
 
+
 function SignIn()
 {
+
+
+    const [UserName,setName]=useState("");
+    const [Password,setPassword]=useState("");
+    const history=useHistory();
+
+    async function Login(){
+        var t2=document.getElementById("t2");
+        if(t2==true){
+            alert("login sucess");
+        }
+        else{
+            alert("fail");
+        }
+        let item={UserName,Password}
+        console.warn(item)
+        let result =await fetch("http://localhost:5000/api/signIn" ,{
+            method:'POST',
+            body:JSON.stringify(item),
+            headers:{
+                "Content-Type":'application/json',
+                "Accept":'application/json'
+                       
+            }
+
+        })
+        result=await result.json()
+        localStorage.setItem("user-info",JSON.stringify(result))
+        history.push("/Home")
+    } 
+
     return(
-        
-<div className="main">
-
-<div className="sub-main">
-
-<div>
-  <div className="imgs">
-  
-   </div>
     
-    <div>
+    <div className='col-sm-6-offset-sm-3'>
+             <h1>SignIn Here!!
 
-            <input type="text" placeholder="UserName" className="Name" />
-        </div>
-        <div>
-                <input type="text" placeholder="Password" className="Name" />
-            </div>
+             </h1>
             
-            </div>
-        
-        </div>
-    
-    </div>
-
-
-    )
+            <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)} placeholder="UserName" className="UserName" />
+            <br/>
+            
+             <input type="text"values={Password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password" className="Paasword" />
+             <br/>
+             <buttton id="t2" onClick={Login} className="btn btn-primary">SignIn</buttton>
+         </div>   
+        )
 }
 export default SignIn

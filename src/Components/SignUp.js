@@ -33,13 +33,15 @@ function Signup()
         })
         result=await result.json()
         localStorage.setItem("user-info",JSON.stringify(result))
-        history.push("/add")
+        history.push("/Home")
     }
 
     return(
     
     <div className='col-sm-6-offset-sm-3'>
-             <h1>SignUp page</h1>
+             <h1>SignUp Here!!
+
+             </h1>
             
             <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)} placeholder="UserName" className="UserName" />
             <br/>
