@@ -55,10 +55,10 @@ function SignIn()
     return(
     
     <div className='col-sm-6-offset-sm-3'>
-             <h1>SignIn Here!! </h1>
+             <h1>Sign In Here!! </h1>
              <form onClick={Login} action='/Home'>
             
-        <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)}  className="form-control" placeholder="UserName" required/>
+        <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)}  className="form-control" placeholder="User Name" required/>
             <br/>
             
              <input type="Password"values={Password} onChange={(e)=>setPassword(e.target.value)}  className="form-control" placeholder="Password" required/>
