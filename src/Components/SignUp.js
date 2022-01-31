@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom'
 //import img2 from './images/un.png';
 //import img3 from './images/password.png';
-//import './SignIn.css'
+import './SignUp.css'
 
 function Signup()
 
@@ -48,7 +48,7 @@ function Signup()
             Errors.UserName="enter Usename";
         }
         if(!value.Password){
-            Errors.UserName="enter pw";
+            Errors.UserName="enter password";
         }
         return Errors;
     }
