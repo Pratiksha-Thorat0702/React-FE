@@ -14,18 +14,20 @@ function SignIn()
     const history=useHistory();
 
     async function Login(){
-        var t2=document.getElementById("t2");
+        console.warn(UserName,Password)
+
+      {/*  var t2=document.getElementById("t2");
         if(t2==true){
             alert("login sucess");
         }
         else{
             alert("fail");
-        }
+        }*/}
         let item={UserName,Password}
-        console.warn(item)
+
         let result =await fetch("http://localhost:5000/api/signIn" ,{
             method:'POST',
-            body:JSON.stringify(item),
+          //  body:JSON.stringify(item),
             headers:{
                 "Content-Type":'application/json',
                 "Accept":'application/json'
@@ -41,11 +43,9 @@ function SignIn()
     return(
     
     <div className='col-sm-6-offset-sm-3'>
-             <h1>SignIn Here!!
-
-             </h1>
+             <h1>SignIn Here!!</h1>
             
-            <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)} placeholder="UserName" className="UserName" />
+            <input type="text" values={UserName} onChange={(e)=>setUserName(e.target.value)} placeholder="UserName" className="UserName" />
             <br/>
             
              <input type="text"values={Password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password" className="Paasword" />

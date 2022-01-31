@@ -1,0 +1,10 @@
+.form-control{
+    /* background-color: rgb(223, 221, 221);*/
+     
+     align-items: center;
+     display: flex;
+     height: 115px;
+     width: 115px;
+     box-sizing: 200px;
+   border: palegreen;
+   }

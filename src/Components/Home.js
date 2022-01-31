@@ -4,7 +4,7 @@ import App from "../App";
 //import './App.css';
 //import logo from './logo.svg';
 //import img from './image/image1.png';
-//import {Quantity} from './Components/Quantity';
+//import Quantity from './Components/Quantity';
 
 class Home extends Component {
 
@@ -76,7 +76,7 @@ class Home extends Component {
         
                       ))
                       }
-                      <script src="script.js"></script>
+                      <script src="Quantity.js"></script>
                 
                 
                       </tbody>
