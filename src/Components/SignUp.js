@@ -7,19 +7,20 @@ import './SignUp.css'
 function Signup()
 
 {
-    const [UserName,setName]=useState("");
-    const [Password,setPassword]=useState("");
+    const [UserName,setUserName]=useState("");
+    const [ActualName,setAcutalName]=useState("");
+    const [PassWord,setPassWord]=useState("");
     const[Errors,setErrors]=useState("")
-    const history=useHistory();
     const[isRegister,setisRegister]=useState(false);
 
+    const history=useHistory();
     async function Register(){
         
-        let item={UserName,Password}
+        let item={UserName,AcutalName,PassWord}
         console.log(item);
         console.warn(item)
         setisRegister(true);
-        let result =await fetch("http://localhost:5000/api/signup" ,{
+        let result =await fetch("http://localhost:5000/api/signup",{
             method:'POST',
             body:JSON.stringify(item),
             headers:{
@@ -43,26 +44,29 @@ function Signup()
     },[Errors])
     const validate = (value) =>{
         const Errors={};
-      //  const regex=/^[^\s@]+[^\s@]+\.[^\s@]{2,}$/i;
+       const regex=/^[^\s@]+[^\s@]+\.[^\s@]{2,}$/i;
         if(!value.UserName){
             Errors.UserName="enter Usename";
         }
-        if(!value.Password){
-            Errors.UserName="enter password";
+        if(!value.ActualName){
+            Errors.ActualName="enter Usename";
+        }
+        if(!value.PassWord){
+            Errors.PassWord="enter password";
         }
         return Errors;
     }
     return(
     
     <div className='col-sm-6-offset-sm-3'>
-             <h1>Sign Up Here!! </h1>
+             <h1>Sign Up Here!! </h1> <br/>
              <form onClick={Register} action='/Home'>
             
-        <input type="text" values={UserName} onChange={(e)=>setName(e.target.value)}  className="form-control" placeholder="User Name" required/>
+        <input type="text" values={UserName} onChange={(e)=>setUserName(e.target.value)}  className="form-control" placeholder="User Name" required/>
             <br/>
-            <input type="text" values={ActualName} onChange={(e)=>setName(e.target.value)}  className="form-control" placeholder="Acutal Name" required/>
+            <input type="text" values={ActualName} onChange={(e)=>setAcutalName(e.target.value)}  className="form-control" placeholder="Acutal Name" required/>
             <br/>
-             <input type="Password"values={Password} onChange={(e)=>setPassword(e.target.value)}  className="form-control" placeholder="Password" required/>
+             <input type="Password"values={PassWord} onChange={(e)=>setPassWord(e.target.value)}  className="form-control" placeholder="Password" required/>
              <br/>
            <button >
            <input type="Submit"/> 
